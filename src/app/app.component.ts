@@ -8,7 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular Basic';
   data="Hello code ";
+  displayVal='';
 
+  getValue(val:string){
+    console.warn(val)
+    this.displayVal = val
+
+  }
   getVal() {
     return "Code Step by Step"
   }

@@ -18,3 +18,10 @@
 
 <h1 (mouseover)="getData('mouseover')">Code step</h1>
 <h1 (mouseleave)="getData('mouseleave')">Code step</h1>
+
+<br><br>
+<input type="text" #box4 (keyup)="getValue(box4.value)" placeholder="Enter Name">
+<br>
+<button (click)="getValue(box4.placeholder)">CLick Me</button>
+<br>
+<p>Box valuue is {{displayVal}}</p>
