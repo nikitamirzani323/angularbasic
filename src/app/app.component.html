@@ -1,3 +1,25 @@
+<button (click)="updateColor()">Update Color</button>
+<ul>
+    <li *ngFor="let rec of userDetails" [style.color]="color" [style.backgroundColor]="bgcolor">
+        {{rec.name}} - {{rec.email}} - {{rec.phone}}
+        <br>
+        <ul>
+            <li *ngFor="let recdetail of rec.accounts">
+                {{recdetail}}
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<br><br>
+<span *ngFor="let rec of users">{{rec}}</span>
+<br><br>
+<input type="text" value={{data}} disabled={{disabled}}>
+<br><br>
+<button (click)="counter('add')">++</button>
+<button (click)="counter('minus')">--</button>
+<p class="heading">count : {{count}}</p>
+<br><br>
 <h1>Hello Angular {{title}}</h1>
 <p>{{data}}</p>
 <p>{{getVal()}}</p>
