@@ -1,5 +1,15 @@
 <app-header></app-header>
 <br><br>
+<h1>TODO LIST</h1>
+<input type="text" #task placeholder="Enter Task">
+<button (click)="addTask(task.value)">Add New Task</button>
+<br>
+<ul>
+    <li *ngFor="let rec of list">
+        {{rec.id}} - {{rec.name}} <button (click)="removeTask(rec.id)">Remove</button>
+    </li>
+</ul>
+<br><br>
 <button mat-raised-button>Basic</button>&nbsp;
 <button mat-raised-button color="primary">Primary</button>&nbsp;
 <button mat-raised-button color="accent">Accent</button>&nbsp;

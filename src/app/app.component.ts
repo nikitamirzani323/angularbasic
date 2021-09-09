@@ -21,6 +21,14 @@ export class AppComponent {
     {name:"Peter",email:"peter@gmail.com",phone:"4444",accounts:['facebookv','gmailt']},
     {name:"Anton",email:"anton@gmail.com",phone:"5555",accounts:['facebookc','gmails']}
   ]
+
+  list:any[]=[];
+  addTask(item:string){
+    this.list.push({id:this.list.length,name:item})
+  }
+  removeTask(id:number){
+    this.list=this.list.filter(item=>item.id!==id)
+  }
   toggle(){
     this.disabled = !this.disabled
   }
