@@ -1,0 +1,20 @@
+<h1>Hello Angular {{title}}</h1>
+<p>{{data}}</p>
+<p>{{getVal()}}</p>
+<p>{{2+2}}</p>
+<app-header></app-header>
+<app-user-list></app-user-list>
+<app-footer></app-footer>
+
+<button (click)="getName('Leman Lee')">Click Me</button>
+<button (click)="getName(100)">Click Me</button>
+<br><br>
+<input type="text" #box1 (keyup)="getData(box1.value)" placeholder="Keyup box">
+<br><br>
+<input type="text" #box2 (keydown)="getData(box2.value)" placeholder="keydown box">
+<br><br>
+<input type="text" #box3 (blur)="getData(box3.value)" placeholder="blur box">
+<br><br>
+
+<h1 (mouseover)="getData('mouseover')">Code step</h1>
+<h1 (mouseleave)="getData('mouseleave')">Code step</h1>
