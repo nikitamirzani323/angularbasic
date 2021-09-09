@@ -1,3 +1,26 @@
+<app-header></app-header>
+<br><br>
+<button mat-raised-button>Basic</button>&nbsp;
+<button mat-raised-button color="primary">Primary</button>&nbsp;
+<button mat-raised-button color="accent">Accent</button>&nbsp;
+<button mat-raised-button color="warn">Warn</button>&nbsp;
+<button mat-raised-button disabled>Disabled</button>&nbsp;
+<a mat-button href="https://www.google.com/" target="_blank">Link</a>
+<br><br>
+<button (click)="toggle()">Toggle</button>
+<h1 *ngIf="disabled">Tai</h1>
+<br><br>
+<form #basicForm="ngForm" (submit)="getForm(basicForm.value)">
+    <input ngModel type="text" name="user" placeholder="Enter User Name">
+    <input ngModel type="password" name="password" placeholder="Enter Password">
+    <input ngModel type="text" name="email" placeholder="Enter EMail">
+    <br>
+    <button>Register</button>
+</form>
+<ul>
+    <li>{{userData.user}}-{{userData.email}}</li>
+</ul>
+<br><br>
 <button (click)="updateColor()">Update Color</button>
 <ul>
     <li *ngFor="let rec of userDetails" [style.color]="color" [style.backgroundColor]="bgcolor">

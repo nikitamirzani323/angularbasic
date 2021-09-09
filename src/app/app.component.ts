@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {NgForm} from '@angular/forms'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,6 +21,15 @@ export class AppComponent {
     {name:"Peter",email:"peter@gmail.com",phone:"4444",accounts:['facebookv','gmailt']},
     {name:"Anton",email:"anton@gmail.com",phone:"5555",accounts:['facebookc','gmails']}
   ]
+  toggle(){
+    this.disabled = !this.disabled
+  }
+  userData:any={};
+  getForm(data:NgForm){
+    console.warn(data)
+    this.userData=data
+  }
+
   updateColor(){
     this.color="skyblue"
     this.bgcolor = "green"
