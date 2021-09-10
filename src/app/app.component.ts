@@ -8,6 +8,7 @@ import {NgForm} from '@angular/forms'
 export class AppComponent {
   title = 'Angular Basic';
   data="Hello code ";
+  dataNumber=10;
   displayVal='';
   count = 0;
   disabled=true
@@ -21,7 +22,13 @@ export class AppComponent {
     {name:"Peter",email:"peter@gmail.com",phone:"4444",accounts:['facebookv','gmailt']},
     {name:"Anton",email:"anton@gmail.com",phone:"5555",accounts:['facebookc','gmails']}
   ]
-
+  updateDataChild(item:string){
+    console.warn(item)
+    this.data=item
+  }
+  updateData(){
+    this.dataNumber=Math.floor(Math.random()*10)
+  }
   list:any[]=[];
   addTask(item:string){
     this.list.push({id:this.list.length,name:item})

@@ -1,4 +1,12 @@
 <app-header></app-header>
+<ul *ngFor="let user of userDetails">
+    <app-user-list [item]='user'></app-user-list>
+</ul>
+<br><br>
+<app-child
+    (updateDataEvent)="updateDataChild($event)"
+    [item]="dataNumber"></app-child>
+<button (click)="updateData()">Update Child Component</button>
 <br><br>
 <h1>TODO LIST</h1>
 <input type="text" #task placeholder="Enter Task">
