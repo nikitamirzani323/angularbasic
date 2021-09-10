@@ -22,6 +22,13 @@ export class AppComponent {
     {name:"Peter",email:"peter@gmail.com",phone:"4444",accounts:['facebookv','gmailt']},
     {name:"Anton",email:"anton@gmail.com",phone:"5555",accounts:['facebookc','gmails']}
   ]
+  title3 = 'Template Reference Variable'
+  getVal3(item:HTMLInputElement){
+    console.warn(item)
+  }
+  title2 = 'Two Way Binding'
+  data2:any;
+
   updateDataChild(item:string){
     console.warn(item)
     this.data=item

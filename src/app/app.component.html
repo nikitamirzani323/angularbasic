@@ -1,4 +1,12 @@
 <app-header></app-header>
+<h2>{{title3}}</h2>
+<input type="text" #box31>
+<button (click)="getVal3(box31)">Click Me</button>
+<br><br>
+<h2>{{title2}}</h2>
+<input type="text" [(ngModel)]="data2">
+<h3>{{data2}}</h3>
+<br><br>
 <ul *ngFor="let user of userDetails">
     <app-user-list [item]='user'></app-user-list>
 </ul>
